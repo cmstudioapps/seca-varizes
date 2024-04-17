@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seca varizes</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    #modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.9);
+    }
+    #modal-content {
+      margin: auto;
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+    }
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .close:hover {
+      color: #bbb;
+    }
+  </style>
+</head>
+<body>
+  <div id="modal">
+    
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img id="modal-content" onclick="zoomIn()" style="cursor: zoom-in;">
+  </div>
+  <dialog id="carregando">
+    <h3>Aguarde...</h3>
+  </dialog>
+  <dialog id="app">
+    <h3>Baixe o app</h3>
+    <br>
+    <a href="" onclick="baixar()">Baixar agora</a>
+    
+   <br>
+   
+   <button onclick="dps()">Lembre-me depois</button>
+   
+  </dialog>
+
+
+  <header>
+    <img id="banner" src="tela-secundaria.png" alt="">
+  </header>
+
+  <div id="dados">
+    <nav>
+      <h3>Idade:</h3> <input id="idade"  type="number" placeholder="Sua idade aqui...">
+    </nav>
+    <br />
+    <nav>
+      <h3>Altura (em cm):</h3> <input id="altura" type="number" placeholder="Sua altura...">
+    </nav>
+    <br>
+    <nav>
+      <h3>Peso (em kg):</h3> <input id="peso" type="number" placeholder="Seu peso...">
+    </nav>
+    <br>
+    <span>
+      <h4>Classificação das varizes:</h4>
+      <select name="classificação" id="classificação">
+        <option value="?" selected>Nenhum</option>
+        <option value="c1">C1 - telangiectasias e/ou velas reticulares (MICROVARISES)</option>
+        <option value="c2">C2 - Velas varicosas</option>
+        <option value="c3">C3 - velas varicosas com inchaço </option>
+        <option value="c4">C4 - hiperpigmentação, coceira ou atrofia branca</option>
+        <option value="c5">C5 - úlcera venosa cicatrizada</option>
+        <option value="c6">C6 - úlcera venosa aberta</option>
+      </select>
+      <br>
+      <img  src="classes.png" onclick="openModal('classes.png');" alt="Imagem" style="width:200px;height:200px;cursor:pointer; margin-left: auto; margin-right: auto;">
+      
+    </span>
+    <br>
+    <button onclick="ok()">Confirmar</button>
+  </div>
+
+  <h2 id="resultado"></h2>
+  
+  <button id="compartilhar" onclick="compartilhar()">Compartilhar</button>
+  
+  <script src="main.js">main.js</script>
+  <script src="receitas.js">receitas.js</script>
+  <script>
+    function openModal(src) {
+      document.getElementById('modal').style.display = "block";
+      document.getElementById('modal-content').src = src;
+    }
+
+    function closeModal() {
+      document.getElementById('modal').style.display = "none";
+    }
+
+    function zoomIn() {
+      var img = document.getElementById('modal-content');
+      img.style.cursor = 'zoom-out';
+    }
+  </script>
+</body>
+</html>

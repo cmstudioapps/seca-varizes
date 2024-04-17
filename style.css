@@ -1,0 +1,186 @@
+* {
+  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+body {
+    background-color: white;
+    color: deeppink;
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  margin-bottom: 5%;
+
+}
+
+header img {
+  
+  height: 40vh;
+  width: 100%;
+margin-left: auto;
+margin-right: auto;
+  
+  
+}
+
+nav {
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  
+  
+}
+
+#dados {
+  
+  padding: 5%;
+  margin-top: 2%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+background-color: black;
+color: white;
+
+border-radius: 20px;
+font-size: 18px;
+  
+}
+h2 {
+  
+  background-color: deeppink;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 10px;
+  animation: aparecer 1s ease-in-out forwards;
+  
+}
+input {
+  
+outline: none;
+height: 60px;
+width: 50%;
+background-color: floralwhite;
+font-weight: bold;
+font-size: 15px;
+padding: 10px;
+border-radius: 20px;
+margin-top: 10px;
+  
+}
+
+button {
+  
+  background-color: deeppink;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  padding: 3%;
+  cursor: pointer;
+  margin-top: 10%;
+}
+
+select {
+  
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  width: 330px;
+  
+}
+
+#carregando {
+  
+  outline: none;
+  padding: 20px;
+  color: deeppink;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  margin-top: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+@keyframes aparecer {
+  
+  0% {
+    
+    opacity: 0%;
+    
+  }
+  
+  100% {
+    
+    opacity: 100%;
+    
+  }
+  
+}
+
+#classes {
+  margin: 5px;
+  height: 50%;
+  width: 100%;
+  
+  
+}
+
+#abrir-Img {
+  
+  
+  
+  
+}
+#abrir-Img img {
+  
+  height: 100%;
+  width: 100%;
+  
+}
+#app {
+  
+  margin-top: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  padding: 10px;
+  
+  
+}
+
+#compartilhar {
+  
+  background-color: lightgray;
+  color: black;
+  font-weight: bold;
+}
+
+img {
+  
+  margin-top: 10px;
+}
+
+#banner {
+  
+  margin-top: 0;
+  
+  
+}
+
+#classs {
+  
+  
+  
+}
