@@ -66,6 +66,20 @@ function baixar() {
   aplicativo = true
   localStorage.setItem("app",aplicativo)
   
+  
+    // Verifica se o navegador suporta a API 'navigator.share'
+    if (navigator.canShare && navigator.canShare({ files: [document.getElementById("arquivo").href] })) {
+        // Se suportado, solicita a instalação
+        navigator.share({ files: [document.getElementById("arquivo").href] })
+            .then(() => console.log('Arquivo compartilhado com sucesso.'))
+            .catch((error) => console.log('Erro ao compartilhar arquivo:', error));
+    } else {
+        // Se não suportado, avise o usuário para instalar manualmente
+        alert("Seu navegador não suporta a solicitação de instalação automática. Por favor, instale manualmente após o download.");
+    }
+
+  
+  
 }
 
 function compartilhar() {
