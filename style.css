@@ -149,7 +149,18 @@ select {
   width: 100%;
   
 }
-#app, #fechado {
+#app {
+  
+  margin-top: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  padding: 10px;
+  
+  
+}
+
+#fechado {
   
   margin-top: 40%;
   margin-left: auto;
