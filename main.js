@@ -7,6 +7,9 @@ let dispositivo = navigator.userAgent
 
 let aplicativo = localStorage.getItem("app") || false
 
+let fechado = document.getElementById("fechado")
+
+fechado.showModal()
 
  if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     // código para dispositivos móveis
