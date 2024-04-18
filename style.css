@@ -149,7 +149,7 @@ select {
   width: 100%;
   
 }
-#app {
+#app, #fechado {
   
   margin-top: 40%;
   margin-left: auto;
